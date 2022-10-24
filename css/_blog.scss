@@ -1,0 +1,98 @@
+.blog {
+  margin-bottom: 16rem;
+  &-heading {
+    text-align: center;
+    margin-bottom: 13.5rem;
+  }
+
+  &-image {
+    height: 45rem;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 6rem;
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: rgba($color: #000000, $alpha: 0.25);
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: white;
+    font-size: 30px;
+    width: 13rem;
+    height: 13rem;
+    border-radius: 100rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+  }
+
+  &-title {
+    font-size: 20px;
+    margin-bottom: 4rem;
+    font-weight: 600;
+  }
+
+  &-desc {
+    margin-bottom: 6rem;
+  }
+
+  &-author {
+    color: inherit;
+    font-weight: 600;
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5rem 0;
+  }
+
+  &-item {
+    display: grid;
+    grid-template-columns: 1fr 13.5rem;
+    grid-gap: 0 8rem;
+    align-items: center;
+  }
+
+  &-item-title {
+    font-weight: 600;
+    margin-bottom: 3rem;
+    line-height: 1.5;
+  }
+
+  &-item-author {
+    font-weight: 300;
+    color: $text-color;
+  }
+
+  &-item-image {
+    position: relative;
+    padding-bottom: 100%;
+    height: 0;
+
+    img {
+      border-radius: 12px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
